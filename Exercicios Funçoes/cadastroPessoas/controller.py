@@ -1,6 +1,3 @@
-def quantPessoas(lista_pessoas):
-    return len(lista_pessoas)
-
 def mediaIdade(lista_pessoas):
     somaidade = 0
     for pessoas in lista_pessoas:

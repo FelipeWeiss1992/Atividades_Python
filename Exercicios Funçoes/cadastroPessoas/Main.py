@@ -27,7 +27,7 @@ def main():
 main()
 print()
 print(f'Lista de Pessoas Cadastradas: {lista_pessoas}\n')
-print(f'Ao todo foram cadastradas {quantPessoas(lista_pessoas)} pessoas.\n')
+print(f'Ao todo foram cadastradas {len(lista_pessoas)} pessoas.\n')
 print(f'A média de todas as idades cadastradas é {mediaIdade(lista_pessoas):.2f}\n')
 print(f'As mulheres cadastradas são {mulheres(lista_pessoas)}.\n')
 print(f'As pessoas cadastradas acima da média são {idadeAcimaMedia(lista_pessoas)}\n')
