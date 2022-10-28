@@ -1,12 +1,13 @@
 def mediaNotas(n1, n2, n3, n4):
-    media = (n1 + n2 + n3 + n4) / 4
+    return (n1 + n2 + n3 + n4) / 4
+    
+
+def aprovacao(media):
     if media >= 7:
-        print('Aluno Aprovado')
-         
+      return 'Aprovado'
+    
     elif media > 5:
-        print('Aluno em Recuperação')   
-         
-    else:
-        print('Aluno Reprovado ')
+      return 'Recuperação'
         
-        return media       
+    else:
+        return 'Reprovado'
