@@ -16,7 +16,7 @@ conta1.sacar(int(input('Digite o valor de Saque da conta do Felipe: R$ '))), '\n
 
 print(conta1.extrato())
 print()
-conta1.transferir(int(input('Digite o valor da Transferencia da conta do Felipe para Maiara: R$ ')),conta2)
+conta1.transferir(int(input('Digite o valor da Transferencia da conta do Felipe para Maiara: R$ ')), conta2)
 print()
 
 print(conta1.extrato())

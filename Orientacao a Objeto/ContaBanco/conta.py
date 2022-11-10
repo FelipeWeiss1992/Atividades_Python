@@ -21,7 +21,6 @@ class Conta:
 
         self.saldo += valor
         
-        return valor
 
     def sacar(self, valor):
 
@@ -34,6 +33,9 @@ class Conta:
 
     def transferir(self, valor, destino):
 
-        self.saldo -= valor
-        destino.saldo += valor
-        return valor
+        if self.saldo - valor < valor:
+            print('Não a saldo a sacar')
+            
+        else:
+            self.saldo -= valor
+            destino.saldo += valor
