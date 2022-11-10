@@ -10,7 +10,6 @@ conta1 = Conta('Felipe', 5258, 500, 1000)
 
 conta2 = Conta('Maiara', 2356, 250, 500)
 
-
 print(conta1)
 print(conta2)
 print()
