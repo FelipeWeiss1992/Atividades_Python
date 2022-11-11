@@ -9,12 +9,7 @@ def menu():
         
     return print(pessoa, '\n',f'O nome é {pessoa.nome}, seu CPF  é {pessoa.cpf}, sua idade é R${pessoa.idade}, sua altura é R${pessoa.altura}')
 
+menu()
 
-while True:
-
-    menu()
-
-    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
-    if resp in 'N':
-       break
+   
 

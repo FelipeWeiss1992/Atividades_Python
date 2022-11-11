@@ -10,9 +10,5 @@ def menu():
     return print(animal, '\n',f'A espécie é {animal.especie}, a raça é {animal.raca}, o porte é {animal.porte}, a cor é {animal.cor}')
 
 
-while True:
     
-    menu()
-    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
-    if resp in 'N':
-        break
+menu()

@@ -9,11 +9,4 @@ def menu():
         
     return print(carro, '\n',f'O modelo é {carro.marca}, a marca é {carro.modelo}, a cor é {carro.cor}, e a categoria é {carro.categoria}')
 
-
-while True:
-
-    menu()
-
-    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
-    if resp in 'N':
-       break
+menu()

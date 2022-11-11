@@ -9,15 +9,9 @@ def menu():
         
     return print(conta, '\n',f'O titular é {conta.titular}, numero da conta é {conta.numero}, saldo da conta é R${conta.saldo}, limite da conta é R${conta.limite}')
 
+menu()
 
-while True:
-
-    menu()
-
-    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
-    if resp in 'N':
-       break
-    
+  
 
    
    
