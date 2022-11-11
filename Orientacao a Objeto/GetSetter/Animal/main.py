@@ -6,14 +6,13 @@ def menu():
                   input('Digite a raça : '),
                   input('Digite o porte : '),
                   input('Digita a cor : '))
-        
+    
     return print(animal, '\n',f'A espécie é {animal.especie}, a raça é {animal.raca}, o porte é {animal.porte}, a cor é {animal.cor}')
 
 
 while True:
-
+    
     menu()
-
     resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
     if resp in 'N':
-       break
+        break
