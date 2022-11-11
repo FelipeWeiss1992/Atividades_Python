@@ -1,12 +1,19 @@
 from carro import Carro
 
-carro1 = Carro('Volskwagen', 'Gol', 'Preto', 'Hatch')
+def menu():
+    
+    carro = Carro(input('Digite a Marca:: '),
+                  input('Digite o Modelo : '),
+                  input('Digite a Cor : '),
+                  input('Digita a categoria : '))
+        
+    return print(carro, '\n',f'O modelo é {carro.marca}, a marca é {carro.modelo}, a cor é {carro.cor}, e a categoria é {carro.categoria}')
 
-carro2 = Carro('Honda', 'Civic', 'Prata', 'Sedan')
 
-print(carro1)
-print(carro2)
-print()
-print(carro1.get_marca(), '|',carro1.get_modelo(), '|', carro1.get_cor(), '|',carro1.get_categoria())
-print(carro2.get_marca(), '|',carro2.get_modelo(), '|', carro2.get_cor(), '|',carro2.get_categoria())
-print()
+while True:
+
+    menu()
+
+    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
+    if resp in 'N':
+       break

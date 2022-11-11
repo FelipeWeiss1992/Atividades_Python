@@ -1,15 +1,20 @@
 from pessoa import Pessoa
 
-pessoa1 = Pessoa('Felipe', '854.584.098-85', 30, 1.81)
+def menu():
+    
+    pessoa = Pessoa(input('Digite seu Nome: '),
+                  input('Digite o CPF : '),
+                  input('Digite o idade : '),
+                  input('Digita a altura : '))
+        
+    return print(pessoa, '\n',f'O nome é {pessoa.nome}, seu CPF  é {pessoa.cpf}, sua idade é R${pessoa.idade}, sua altura é R${pessoa.altura}')
 
-pessoa2 = Pessoa('Maiara', '458.768.787-88', 22, 1.61)
 
+while True:
 
-print(pessoa1)
-print(pessoa2)
-print()
-print(pessoa1.get_nome(), '|',pessoa1.get_cpf(), '|',pessoa1.get_idade(), '|',pessoa1.get_altura())
-print()
-print(pessoa2.get_nome(), '|',pessoa2.get_cpf(), '|',pessoa2.get_idade(), '|',pessoa2.get_altura())
-print()
+    menu()
+
+    resp = input('Deseja cadastrar outra pessoa: [S/N] ').strip().upper()
+    if resp in 'N':
+       break
 

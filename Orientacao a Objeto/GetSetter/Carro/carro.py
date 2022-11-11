@@ -12,25 +12,34 @@ class Carro:
         self.__cor = cor
         self.__categoria = categoria
 
-    def set_marca(self, marca):
-        self.__marca = marca
-    def get_marca(self):
+    @property
+    def marca(self):
         return self.__marca
-
-    def set_modelo(self, modelo):
+    @marca.setter
+    def marca(self, marca):
+        self.__marca = marca
+    
+    @property
+    def modelo(self):
+        return self.__modelo  
+    @modelo.setter
+    def modelo(self, modelo):
         self.__modelo = modelo
-    def get_modelo(self):
-        return self.__modelo   
-
-    def set_cor(self, cor):
+     
+    @property
+    def cor(self):
+        return self.__cor 
+    @cor.setter
+    def cor(self, cor):
         self.__cor = cor
-    def get_cor(self):
-        return self.__cor  
-
-    def set_categoria(self, categoria):
+   
+    @property
+    def categoria(self):
+        return self.__categoria 
+    @categoria.setter
+    def categoria(self, categoria):
         self.__categoria = categoria
-    def get_categoria(self):
-        return self.__categoria     
+        
 
     def __str__(self):
-        return f'Marca: {self.__marca} - Modelo: {self.__modelo} - Cor: {self.__cor} - Marca: {self.__categoria}'
+        return f'Marca: {self.marca} - Modelo: {self.modelo} - Cor: {self.cor} - Marca: {self.categoria}'

@@ -13,26 +13,35 @@ class Pessoa:
         self.__idade = idade
         self.__altura = altura
 
-    
-    def set_nome(self, nome):
-        self.__nome = nome
-    def get_nome(self):
+
+    @property
+    def nome(self):
         return self.__nome
-
-    def set_cpf(self, cpf):
-        self.__cpf = cpf
-    def get_cpf(self):
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
+    
+    @property
+    def cpf(self):
         return self.__cpf
-
-    def set_idade(self, idade):
-        self.__idade = idade
-    def get_idade(self):
+    @cpf.setter
+    def cpf(self, cpf):
+        self.__cpf = cpf
+    
+    @property
+    def idade(self):
         return self.__idade
-
-    def set_altura(self, altura):
-        self.__altura = altura
-    def get_altura(self):
+    @idade.setter
+    def idade(self, idade):
+        self.__idade = idade
+    
+    @property
+    def altura(self):
         return self.__altura 
+    @altura.setter
+    def altura(self, altura):
+        self.__altura = altura
+    
 
     def __str__(self):
-        return f'Nome: {self.get_nome()} - CPF: {self.get_cpf()} - Idade: {self.get_idade()} - Altura: {self.get_altura()}'
+        return f'Nome: {self.nome} - CPF: {self.cpf} - Idade: {self.idade} - Altura: {self.altura}'

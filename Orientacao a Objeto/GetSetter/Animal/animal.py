@@ -12,26 +12,34 @@ class Animal():
         self.__porte = porte
         self.__cor = cor
 
-    def set_especie(self, especie):
+    @property
+    def especie(self, especie):
         self.__especie = especie
-    def get_especie(self):
+    @especie.getter
+    def especie(self):
         return self.__especie
 
-    def set_raca(self, raca):
+    @property
+    def raca(self, raca):
         self.__raca = raca
-    def get_raca(self):
+    @raca.getter
+    def raca(self):
         return self.__raca
 
-    def set_porte(self, porte):
+    @property
+    def porte(self, porte):
         self.__porte = porte
-    def get_porte(self):
+    @porte.getter
+    def porte(self):
         return self.__porte
 
-    def set_cor(self, cor):
+    @property
+    def cor(self, cor):
         self.__cor = cor
-    def get_cor(self):
+    @cor.getter
+    def cor(self):
         return self.__cor
 
     def __str__(self):
-        return f'Especie: {self.__especie} - Raça: {self.__raca} - Porte: {self.__porte} - Cor: {self.__cor}'
+        return f'Especie: {self.especie} - Raça: {self.raca} - Porte: {self.porte} - Cor: {self.cor}'
         
