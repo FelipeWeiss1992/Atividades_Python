@@ -10,7 +10,6 @@ class Conta:
     @property
     def titular(self):
         return self.__titular
-
     @titular.setter
     def titular(self, titular):
         self.__titular = titular
@@ -18,7 +17,6 @@ class Conta:
     @property
     def numero(self):
         return self.__numero
-
     @numero.setter   
     def numero(self, numero):
         self.__numero = numero
