@@ -1,6 +1,7 @@
 class Conta:
 
     __titular = ''
+    __agencia = 0
     __numero = 0
     __saldo = 0
 
@@ -10,6 +11,13 @@ class Conta:
     @titular.setter
     def titular(self, titular):
         self.__titular = titular
+
+    @property
+    def agencia(self):
+        return self.__agencia
+    @agencia.setter
+    def agencia(self, agencia):
+        self.__agencia = agencia
 
     @property
     def numero(self):
@@ -26,7 +34,7 @@ class Conta:
         self.__saldo = saldo
 
     def __str__(self):
-        return f'{self.titular}; {self.numero}; {self.saldo}'
+        return f'{self.titular}; {self.agencia}; {self.numero}; {self.saldo}'
     
 
 
