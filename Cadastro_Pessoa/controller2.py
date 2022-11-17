@@ -1,12 +1,12 @@
 def salvar(nome):
-    with open('modulo2/pessoas.txt', 'a') as arquivo:
+    with open('Cadastro_Pessoa\pessoas.txt', 'a') as arquivo:
         arquivo.write(f'{nome}\n')
 
 def listar():
     nomes = []
-    with open('modulo2/pessoas.txt', 'r') as arquivo:
+    with open('Cadastro_Pessoa\pessoas.txt', 'r') as arquivo:
         for name in arquivo:
-            name = name.strip()   
+            name = name.split()
             nomes.append(name) 
         return nomes
 
