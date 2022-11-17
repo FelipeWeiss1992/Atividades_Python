@@ -19,7 +19,7 @@ def menu():
             
             case 1:
                 print('-=' * 7, 'Pessoa Fisica', '-=' * 7)
-                menu_inicial = int(input('[1] Cadastrar Conta Pessoa Fisica\n[2] Listar Contas Pessoa Fisica\nQual opção: ''\n'))
+                menu_inicial = int(input('[1] Cadastrar Conta Pessoa Fisica\n[2] Listar Contas Pessoa Fisica\nQual opção: '))
                 print()
                 match menu_inicial:
 
