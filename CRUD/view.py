@@ -12,8 +12,7 @@ def menu():
     conta.saldo = 0
 
     create(conta)
-    print('Conta Criada com Sucesso.')
-    lista_contas = read()
-
+    
+    read()
 
 menu()
