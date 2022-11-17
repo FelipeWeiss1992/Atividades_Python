@@ -11,14 +11,16 @@ def menu():
 
     while (menu != 0):
 
-        print('-=' * 10,'Cadastro Banco', '-=' * 10)
-        menu = int(input('[1] Acessar Pessoa Fisica\n[2] Acessar Pessoa Juridica\n[0]Sair\nQual opção: '))
+        print('-=' * 7,'Cadastro Banco', '-=' * 7)
+        menu = int(input('[1] Acessar Pessoa Fisica\n[2] Acessar Pessoa Juridica\n[0] Sair\nQual opção: '))
+        print()
 
         match menu:
             
             case 1:
-                menu_inicial = int(input('[1] Cadastrar Conta Pessoa Fisica\n[2] Listar Contas Pessoa Fisica\nQual opção: '))
-
+                print('-=' * 7, 'Pessoa Fisica', '-=' * 7)
+                menu_inicial = int(input('[1] Cadastrar Conta Pessoa Fisica\n[2] Listar Contas Pessoa Fisica\nQual opção: ''\n'))
+                print()
                 match menu_inicial:
 
                     case 1:
@@ -45,8 +47,9 @@ def menu():
                         sleep(1)
                         print()
             case 2:
+                 print('-=' * 7, 'Pessoa Juridica', '-=' * 7)
                  menu_inicial = int(input('[1] Cadastrar Conta Pessoa Juridica\n[2] Listar Contas Pessoa Juridica\nQual opção: '))
-
+                 print()   
                  match menu_inicial:
 
                     case 1:
@@ -68,7 +71,7 @@ def menu():
                             print()
 
                     case 2:
-                        print('-=' * 10, 'Contas PJ Cadastradas', '-=' * 10)
+                        print('-=' * 7, 'Contas PJ Cadastradas', '-=' * 7)
                         read_pj() 
                         sleep(1)
                         print()
