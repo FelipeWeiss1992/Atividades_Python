@@ -12,7 +12,6 @@ def read_pj():
     for conta in contas:
         conta = conta.strip()
         conta_objeto = conta.split(';')
-        print(conta_objeto)
         conta = PessoaJuridica()
 
         conta.agencia = conta_objeto[0]
@@ -23,6 +22,7 @@ def read_pj():
         conta.saldo_inicial = conta_objeto[4]
         
         lista_contas.append(conta)
+        print(conta_objeto)
     
     contas.close()
 
