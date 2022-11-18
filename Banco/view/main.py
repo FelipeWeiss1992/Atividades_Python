@@ -28,7 +28,7 @@ def menu():
                         pessoafisica = PessoaFisica()
                         pessoafisica.titular = (input('Digite seu Nome Completo: '))
                         pessoafisica.cpf = (input('Digite seu CPF:'))
-                        pessoafisica.saldo_inicial = float(input('Saldo Inicial: '))
+                        pessoafisica.saldo_inicial = float(input('Saldo Inicial: R$ '))
                         resp_seg_tit = (input('Deseja cadastar um segundo titular: [S/N]')).upper().strip()
                         if resp_seg_tit in 'N':
                             create_psf(pessoafisica)
@@ -57,7 +57,7 @@ def menu():
                         pessoajuridica = PessoaJuridica()
                         pessoajuridica.titular = (input('Digite seu Nome Completo: '))
                         pessoajuridica.cnpj = (input('Digite seu CNPJ:'))
-                        pessoajuridica.saldo_inicial = float(input('Saldo Inicial: '))
+                        pessoajuridica.saldo_inicial = float(input('Saldo Inicial: R$ '))
                         resp_seg_tit = str(input('Deseja cadastar um segundo titular: [S/N]')).upper().strip()
                         if resp_seg_tit in 'N':
                             create_pj(pessoajuridica)
