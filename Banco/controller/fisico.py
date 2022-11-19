@@ -23,7 +23,8 @@ def read_psf():
 
         lista_contas.append(conta)
         print(conta_objeto)
-        
+
     contas.close()
 
     return lista_contas
+

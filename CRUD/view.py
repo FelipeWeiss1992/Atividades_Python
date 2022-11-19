@@ -1,18 +1,22 @@
 from random import randint
 from model import Conta
-from controller import create, read
+from controller import create, read, update, delete
 
-def menu():
 
-    conta = Conta()
 
-    conta.titular = str(input('Digite Seu Nome Completo: '))
-    conta.agencia = 2300
-    conta.numero = randint(1, 999999)
-    conta.saldo = 0
+conta = Conta()
 
-    create(conta)
-    
-    read()
+conta.titular = 'Andre'
+conta.numero = 28988
+conta.saldo = 0
 
-menu()
+#create(conta)
+        
+#lista_contas = read()
+
+#delete(25852)
+
+update()
+
+
+

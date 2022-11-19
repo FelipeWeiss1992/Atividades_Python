@@ -2,7 +2,7 @@ from time import sleep
 from model.pessoaFisica import PessoaFisica
 from model.pessoaJuridica import PessoaJuridica
 
-from controller.fisico import create_psf, read_psf
+from controller.fisico import create_psf, read_psf, delete_psf
 from controller.juridico import create_pj, read_pj
 
 def menu():
@@ -46,6 +46,11 @@ def menu():
                         read_psf()
                         sleep(1)
                         print()
+
+                    case 3:
+                        conta = str(input('Digite o Nome do hóspede:'))
+                        delete_psf(conta)
+
             case 2:
                  print('-=' * 7, 'Pessoa Juridica', '-=' * 7)
                  menu_inicial = int(input('[1] Cadastrar Conta Pessoa Juridica\n[2] Listar Contas Pessoa Juridica\nQual opção: '))
