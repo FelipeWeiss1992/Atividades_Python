@@ -13,7 +13,6 @@ def read():
     for conta in contas:
         conta = conta.strip()
         conta_objeto = conta.split(';')
-        print(conta_objeto)
         conta = Conta()
         conta.titular = conta_objeto[0]
         conta.numero = conta_objeto[1]
@@ -30,9 +29,10 @@ def update(conta_update:Conta):
         conta_limpa = conta.strip()
         conta_objeto = conta_limpa.split(';')
         if conta_update.numero == int(conta_objeto[1]):
-            lista_contas.append((str(conta_objeto) + '\n'))
+            lista_contas.append(str(conta_update) + '\n')
         else:
             lista_contas.append(conta)
+            
 
     contas.close()
         

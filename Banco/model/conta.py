@@ -1,7 +1,14 @@
 class Conta:
-
+    __id = 0
     __agencia = 'Blumenau'
     __numero_agencia = '0101'
+
+    @property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, id):
+        self.__id = id
 
     @property
     def agencia(self):
@@ -18,4 +25,4 @@ class Conta:
         self.__numero_agencia = numero_agencia
 
     def __str__(self):
-        return f'{self.agencia}; {self. numero_agencia}'
+        return f'{self.id}; {self.agencia}; {self. numero_agencia}'

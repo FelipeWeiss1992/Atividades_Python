@@ -1,4 +1,5 @@
 from model.pessoaFisica import PessoaFisica
+from model.conta import Conta
 
 def create_psf(conta):
     contas = open ('Banco\pessoafisica.txt', 'a')
@@ -14,12 +15,13 @@ def read_psf():
         conta_objeto = conta.split(';')
         conta = PessoaFisica()
 
-        conta.agencia = conta_objeto[0]
-        conta.numero_agencia = conta_objeto[1]
+        conta.id = conta_objeto[0]
+        conta.agencia = conta_objeto[1]
+        conta.numero_agencia = conta_objeto[2]
 
-        conta.titular = conta_objeto[2]
-        conta.cpf = conta_objeto[3]
-        conta.saldo_inicial = conta_objeto[4]
+        conta.titular = conta_objeto[3]
+        conta.cpf = conta_objeto[4]
+        conta.saldo_inicial = conta_objeto[5]
 
         lista_contas.append(conta)
         print(conta_objeto)
@@ -27,4 +29,37 @@ def read_psf():
     contas.close()
 
     return lista_contas
+
+def update_psf(conta_update:Conta):
+    lista_contas = []
+    contas = open('Banco\pessoafisica.txt', 'r')
+    for conta in contas:
+        conta_limpa = conta.strip()
+        conta_objeto = conta_limpa.split(';')
+        if conta_update.id == int(conta_objeto[0]):
+            lista_contas.append(str(conta_update) + '\n')
+        else:
+            lista_contas.append(conta)
+            
+
+    contas.close()
+        
+    contas = open('Banco\pessoafisica.txt', 'w')
+    contas.writelines(lista_contas)
+    contas.close()
+
+def delete_psf(id):
+    lista_contas = []
+    contas = open('Banco\pessoafisica.txt', 'r')
+    for conta in contas:
+        conta_limpa = conta.strip()
+        conta_objeto = conta_limpa.split(';')
+        if id != int(conta_objeto[0]):
+            lista_contas.append(conta)
+
+    contas.close()
+        
+    contas = open('Banco\pessoafisica.txt', 'w')
+    contas.writelines(lista_contas)
+    contas.close()
 

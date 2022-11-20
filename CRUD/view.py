@@ -6,17 +6,19 @@ from controller import create, read, update, delete
 
 conta = Conta()
 
-conta.titular = 'Andre'
-conta.numero = 28988
-conta.saldo = 0
+conta.titular = 'Felipe'
+conta.numero = 200
+conta.saldo = 800
+
+
 
 #create(conta)
         
 #lista_contas = read()
 
-#delete(25852)
+#delete(28988)
 
-update()
+update(conta)
 
 
 
