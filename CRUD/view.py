@@ -6,9 +6,9 @@ from controller import create, read, update, delete
 
 conta = Conta()
 
-conta.titular = 'Felipe'
+conta.titular = 'Larissa'
 conta.numero = 200
-conta.saldo = 800
+conta.saldo = 1500
 
 
 
