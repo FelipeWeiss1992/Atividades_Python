@@ -8,11 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cadastro Pessoas</title>
+    <title>{{titulo}}</title>
+
 </head>
 <body>
-
-    <header>
+    
+    <header class="shadow p-3 mb-5 bg-white rounded">
 
         <ul class="nav nav-pills">
             <li class="nav-item">
@@ -24,18 +25,21 @@
         </ul>
         
     </header>
-
-    <div class = 'container'>
-
-        <h1 class = 'titulo' >{{ titulo }}</h1>
-        <hr>
-
-        {%block conteudo%} {%endblock%}
+    <main>
     
-    </div>
+      <div class = 'container'>
+
+          <h1 class = 'titulo' >{{ titulo }}</h1>
+
+
+          {%block conteudo%} {%endblock%}
+    
+      </div>
+    </main>
         
     <footer>
-
+        
+        
         <span>Desenvolvido Aulas Python e Flask +Devs2Blu</span>
 
     </footer>

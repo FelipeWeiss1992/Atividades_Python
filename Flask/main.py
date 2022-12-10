@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, redirect
 from pessoa import Pessoa
 
+pessoa1 = Pessoa('Felipe', '30', 1.81)
+pessoa2 = Pessoa('Haiko', '17', 1.75)
+pessoa3 = Pessoa('Jean', '40', 1.85)
 
-lista = []
+
+lista = [pessoa1,pessoa2,pessoa3]
 
 app = Flask(__name__)
 
@@ -20,9 +24,9 @@ def criar():
     idade = request.form['idade']
     altura = request.form['altura']
 
-    pessoas = Pessoa(nome, idade, altura)
+    pessoa = Pessoa(nome, idade, altura)
 
-    lista.append(pessoas)
+    lista.append(pessoa)
 
     return redirect('/')
 
