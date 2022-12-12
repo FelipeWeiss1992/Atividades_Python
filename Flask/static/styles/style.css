@@ -28,10 +28,8 @@ header a {
 } 
 
 main{
-
 display: inline;
 justify-content: center;
-
 }
 
 footer{
@@ -45,5 +43,4 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
