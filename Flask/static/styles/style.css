@@ -10,22 +10,28 @@ header{
     background-color: rgb(255, 255, 255);
 }
 
-body{
-    background-color: rgb(90, 153, 209);   
-}
-
 header a {
     width: 100px;
     margin: 15px;
     box-shadow: 10px 5px 15px rgb(53, 53, 247);
 }
+.btn-danger{
 
+    width: 100px;
+    margin: 15px;
+    box-shadow: 10px 5px 15px rgb(247, 53, 66);
+
+}
 .btn-success{
     width: 100px;
     margin: 15px;
     box-shadow: 10px 5px 15px rgb(133, 234, 151);
     color: white;
 } 
+
+body{
+    background-color: rgb(90, 153, 209);   
+}
 
 main{
 display: inline;
